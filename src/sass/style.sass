@@ -1,0 +1,175 @@
+body
+  font-family: "Roboto", sans-serif
+  color: #ffffff
+
+a
+  text-decoration: none
+
+h1,
+h2,
+  text-transform: uppercase
+
+.order-call__btn,
+.promo__btn
+  color: #ffffff
+  font-size: 14px
+  padding: 16px 20px
+  text-transform: uppercase
+  background: linear-gradient(0deg, #1eacc7 0%, #4ce2ff 100%)
+  box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.12)
+  border: none
+  border-radius: 4px
+
+.title
+  text-align: center
+  color: #222222
+  font-size: 38px
+  line-height: 1.26
+  font-weight: 700
+  text-transform: uppercase
+
+.label
+  margin: 0 auto 30px auto
+  color: #ffffff
+  background-color: #212121
+  padding: 8px
+  max-width: min-content
+  text-align: center
+  font-size: 11px
+  line-height: 1
+  font-weight: 400
+  text-transform: uppercase
+
+// header
+
+.header
+  position: relative
+  &__nav
+    background-color: #212121
+    top: 0
+    width: 100%
+  &__sub
+    background-color: rgba(0, 0, 0, 0.6)
+    position: absolute
+    width: 100%
+
+.menu
+  display: flex
+  justify-content: space-between
+  margin: 0
+  padding: 13px 70px
+  list-style-type: none
+  &__item
+    border-right: 2px dotted black
+    padding-right: 27px
+  &__link
+    font-weight: 300
+    font-size: 15px
+    color: #ffffff
+
+.logo
+  margin-top: 16px
+  margin-bottom: 16px
+  &__link
+    max-width: 100%
+    display: flex
+    align-items: center
+    column-gap: 7px
+  &__name
+    margin-top: 2px
+    font-family: "Nokia-Sans" sans-serif
+    text-transform: uppercase
+    font-size: 25px
+    color: #ffffff
+  &__official
+    font-weight: 400
+    font-size: 13px
+    opacity: 0.5
+
+.phone
+  text-align: right
+  margin-top: auto
+  margin-bottom: auto
+  &__text
+    font-weight: 300
+    font-size: 12px
+  &__link
+    font-weight: 400
+    font-size: 22px
+    color: #ffffff
+
+.order-call
+  margin-top: auto
+  margin-bottom: auto
+
+// promo
+
+.promo
+  min-height: 800px
+  background: url("../img/bg/uber_bg.jpg") center center/cover no-repeat
+  padding: 150px 0 135px 0
+  &__header
+    font-weight: 700
+    font-size: 60px
+    line-height: 100%
+    text-align: center
+    margin: 0
+  &__subheader
+    font-weight: 900
+    font-size: 36px
+    line-height: 100%
+    text-align: center
+    margin: 0
+    margin-top: 22px
+  &__descr
+    font-weight: 400
+    font-size: 18px
+    line-height: 133%
+    text-align: center
+    color: #ffffff
+    margin-top: 23px
+  &__btn
+    display: block
+    margin: 118px auto 0 auto
+
+// advantages
+
+.advantages
+  padding: 48px 0 51px 0
+  &__list
+    display: flex
+    flex-wrap: wrap
+
+.advantage
+  display: flex
+  align-items: center
+  column-gap: 25px
+  padding: 13px 35px
+  &__img
+    background-color: #1eacc7
+    min-width: 116px
+    height: 116px
+    border-radius: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+  &__name
+    color: #1eacc7
+    font-size: 17px
+    line-height: 1.23
+    font-weight: 400
+  &__info
+    color: #202020
+    font-size: 17px
+    line-height: 1.23
+    font-weight: 400
+
+// mobile
+.mobile
+  padding: 48px auto 80px
+  .subtitle
+    color: #222222
+    text-align: center
+    font-size: 17px
+    line-height: 1.23
+    font-weight: 400
