@@ -1,6 +1,8 @@
+@import variables.sass
+
 body
   font-family: "Roboto", sans-serif
-  color: #ffffff
+  color: $white-color
 
 a
   text-decoration: none
@@ -9,16 +11,22 @@ h1,
 h2,
   text-transform: uppercase
 
+ul
+  list-style-type: none
+
 .order-call__btn,
 .promo__btn
-  color: #ffffff
+  color: $white-color
   font-size: 14px
   padding: 16px 20px
   text-transform: uppercase
-  background: linear-gradient(0deg, #1eacc7 0%, #4ce2ff 100%)
+  background: linear-gradient(0deg, $accent-blue-color 0%, #4ce2ff 100%)
   box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.12)
   border: none
   border-radius: 4px
+  &:hover
+    background-image: none
+    background-color: $accent-blue-color
 
 .title
   text-align: center
@@ -30,7 +38,7 @@ h2,
 
 .label
   margin: 0 auto 30px auto
-  color: #ffffff
+  color: $white-color
   background-color: #212121
   padding: 8px
   max-width: min-content
@@ -65,7 +73,7 @@ h2,
   &__link
     font-weight: 300
     font-size: 15px
-    color: #ffffff
+    color: $white-color
 
 .logo
   margin-top: 16px
@@ -80,7 +88,7 @@ h2,
     font-family: Nokia-Sans, sans-serif
     text-transform: uppercase
     font-size: 25px
-    color: #ffffff
+    color: $white-color
   &__official
     font-weight: 400
     font-size: 13px
@@ -96,7 +104,7 @@ h2,
   &__link
     font-weight: 400
     font-size: 22px
-    color: #ffffff
+    color: $white-color
 
 .order-call
   margin-top: auto
@@ -106,7 +114,7 @@ h2,
 
 .promo
   min-height: 800px
-  background: url("../img/bg/uber_bg.jpg") center center/cover no-repeat
+  background: url("../img/promo/bg.jpg") center center/cover no-repeat
   padding: 150px 0 135px 0
   &__header
     font-weight: 700
@@ -126,7 +134,7 @@ h2,
     font-size: 18px
     line-height: 133%
     text-align: center
-    color: #ffffff
+    color: $white-color
     margin-top: 23px
   &__btn
     display: block
@@ -146,7 +154,7 @@ h2,
   column-gap: 25px
   padding: 13px 35px
   &__img
-    background-color: #1eacc7
+    background-color: $accent-blue-color
     min-width: 116px
     height: 116px
     border-radius: 50%
@@ -169,7 +177,7 @@ h2,
 .mobile
   padding: 48px 0 80px 0
   min-height: 864px
-  background: url("../img/bg/mobile_app_uber.jpg") center center/cover no-repeat
+  background: url("../img/mobile/bg.jpg") center center/cover no-repeat
   &__subtitle
     color: #222222
     text-align: center
@@ -196,7 +204,7 @@ h2,
     &-6
       background: url("../img/mobile/card_6.jpg") center center/cover no-repeat
     &-subtitle
-      color: #ffffff
+      color: $white-color
       text-align: center
       font-size: 24px
       line-height: 1.29
@@ -216,5 +224,120 @@ h2,
       width: 29px
       height: 29px
       cursor: pointer
-    &-img
-      width: 100%
+      &::before
+        content: ''
+        display: block
+        width: 14px
+        height: 2px
+        background-color: $accent-blue-color
+        transition: background-color .2s linear
+      &::after
+        content: ''
+        display: block
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+        width: 2px
+        height: 14px
+        background-color: $accent-blue-color
+        transition: background-color .2s linear
+      &:hover
+        &::before, &::after
+          background-color: $accent-red-color
+
+// car
+
+.car
+  position: relative
+  &__black-part
+    padding-top: 59px
+    min-height: 502px
+    background-color: #070716
+  .label
+    color: #070716
+    background-color: $white-color
+    margin-bottom: 27px
+  .title
+    color: $white-color
+  &__subtitle
+    color: $white-color
+    text-align: center
+    font-size: 17px
+    line-height: 1.23
+    font-weight: 400
+  &__img-title
+    color: $white-color
+    font-size: 42px
+    font-weight: 400
+    position: absolute
+    top: 255px
+    left: 50%
+    transform: translateX(-50%)
+    z-index: 2
+  &__img-subtitle
+    color: #070716
+    font-size: 22px
+    font-weight: 400
+    position: absolute
+    top: 310px
+    left: 50%
+    transform: translateX(-50%)
+    z-index: 2
+  &__img
+    position: absolute
+    top: 234px
+    left: 50%
+    transform: translateX(-50%)
+  &__white-part
+    background: url("../img/car/bg.jpg") center center/cover no-repeat
+    min-height: 397px
+  &__text
+    position: absolute
+    color: #222222
+    font-size: 17px
+    line-height: 1.4
+    font-weight: 300
+    bottom: 137px
+    left: 50%
+    transform: translateX(-50%)
+
+//require
+
+.require
+  padding: 68px 0 90px 0
+  &__block
+    margin: 33px 0
+  &__title
+    color: #1CA8C3
+    font-size: 22px
+    line-height: 1.09
+    font-weight: 400
+  &__list
+    margin-top: 22px
+    padding-left: 50px
+  &__item
+    position: relative
+    color: #222222
+    font-size: 17px
+    line-height: 1.41
+    font-weight: 300
+    margin-bottom: 6px
+    &::before
+      content: ""
+      display: block
+      position: absolute
+      left: -32px
+      top: 1px
+      width: 21px
+      height: 20px
+      background: url("../icons/require/mark_blue.png") center (center/cover) no-repeat
+  &__descr
+    color: #1CA8C3
+    font-size: 17px
+    line-height: 1.41
+    font-weight: 300
+  .warning
+    .require__title
+      color: $accent-red-color
+    .require__item::before
+      background: url("../icons/require/mark_red.png") center (center/cover) no-repeat
